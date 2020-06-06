@@ -32,12 +32,12 @@ using namespace std;
 	float d_detreal;				// determinant real part
 	float d_detimag;				// determinant imaginary part
 	float d_divtemp;				// complex determinant
-	float d_sreal[2][2];			//encoding matrix of size 2x2 real part
-	float d_simag[2][2];			//encoding matrix of size 2x2 imaginary part
+	float d_sreal[2][2];				//encoding matrix of size 2x2 real part
+	float d_simag[2][2];				//encoding matrix of size 2x2 imaginary part
 	float d_rpreal[2];				//reconstructed pixels real part 
 	float d_rpimag[2];				//reconstructed pixels imaginary part
-	float d_sinreal[2][2];			//
-	float d_sinimag[2][2];
+	float d_sinreal[2][2];				// to find inverse of 2x2 matrix (real part)
+	float d_sinimag[2][2];				// to find inverse of 2x2 matrix (imaginary part)
 
 	//CUDA thread index calculation 
 	int col = blockIdx.x * blockDim.x + threadIdx.x;
